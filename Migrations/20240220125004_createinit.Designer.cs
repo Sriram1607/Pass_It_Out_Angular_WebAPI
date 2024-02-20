@@ -12,8 +12,8 @@ using Pass_It_Out_Angular_WebAPI.Context;
 namespace PassItOutAngularWebAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240220083643_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240220125004_createinit")]
+    partial class createinit
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -121,6 +121,9 @@ namespace PassItOutAngularWebAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PostTo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")

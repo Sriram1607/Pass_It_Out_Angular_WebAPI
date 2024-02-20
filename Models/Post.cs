@@ -17,5 +17,7 @@
         public string? CreatedBy { set; get;}
         public DateTime CreatedDate { set; get; }
 
+        public bool Status { set; get; }
+
     }
 }

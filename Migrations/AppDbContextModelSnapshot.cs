@@ -120,6 +120,9 @@ namespace PassItOutAngularWebAPI.Migrations
                     b.Property<string>("PostTo")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
