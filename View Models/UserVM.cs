@@ -16,11 +16,14 @@ namespace Pass_It_Out_Angular_WebAPI.View_Models
         public string? LastName { set; get; }
 
         [Required(ErrorMessage ="Email cannot be empty!!!")]
+        [EmailAddress]
         public string? Email { set; get; }
         public string? Location { set; get; }
 
         [Required (ErrorMessage ="Password cannot be empty!!!")]
         public string? Password { set; get; }
+
+        [Compare("Password")]
         public string? ConfirmPassword { set; get; }
 
     }

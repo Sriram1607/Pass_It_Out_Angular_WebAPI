@@ -5,7 +5,7 @@ namespace Pass_It_Out_Angular_WebAPI.Services.Posts
 {
     public interface IPost
     {
-        bool Save(UserPostVM post);
+        bool Save(Post post);
         List<Post> GetAllPosts(string UserId);
         List<Post> MyPosts(string UserId);
 

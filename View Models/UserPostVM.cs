@@ -10,7 +10,7 @@ namespace Pass_It_Out_Angular_WebAPI.View_Models
         [Required(ErrorMessage = "Title cannot be Empty!!!")]
         public int CategoryId { set; get; }
         public string? Description { set; get; }
-        public FormFile? Image { set; get; }
+        public IFormFile Image { set; get; }
 
         public string? Location { set; get; }
 

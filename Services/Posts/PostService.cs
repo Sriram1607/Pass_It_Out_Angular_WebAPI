@@ -32,36 +32,27 @@ namespace Pass_It_Out_Angular_WebAPI.Services.Posts
             return ctx.Posts.Where(val => val.UserId==UserId).ToList();
         }
 
-        public bool Save(UserPostVM post)
+        public bool Save(Post post)
         {
-            Post newpost = new Post();
-            newpost.Title = post.Title;
-            newpost.CategoryId=post.CategoryId;
-            newpost.Description = post.Description;
-            //newpost.Image = post.Image;
-            newpost.Location=post.Location;
-            newpost.PostTo=post.PostTo;
-            newpost.CreatedBy=post.CreatedBy;
-            newpost.CreatedDate = post.Createddate;
-            newpost.Status = post.Status;
+            ctx.Posts.Add(post);
             int rowsupdated = ctx.SaveChanges();
             return rowsupdated>0;
         }
 
         public bool Update(Post post)
         {
-            Post updatepost = GetPostById(post.UserId);
-            updatepost.Title = post.Title;
-            updatepost.Title = post.Title;
-            updatepost.CategoryId = post.CategoryId;
-            updatepost.Description = post.Description;
-            //newpost.Image = post.Image;
-            updatepost.Location = post.Location;
-            updatepost.PostTo = post.PostTo;
-            updatepost.CreatedBy = post.CreatedBy;
-            updatepost.CreatedDate = post.CreatedDate;
-            updatepost.Status = post.Status;
-            ctx.Posts.Update(updatepost);
+            //Post updatepost = GetPostById(post.UserId);
+            //updatepost.Title = post.Title;
+            //updatepost.Title = post.Title;
+            //updatepost.CategoryId = post.CategoryId;
+            //updatepost.Description = post.Description;
+            ////newpost.Image = post.Image;
+            //updatepost.Location = post.Location;
+            //updatepost.PostTo = post.PostTo;
+            //updatepost.CreatedBy = post.CreatedBy;
+            //updatepost.CreatedDate = post.CreatedDate;
+            //updatepost.Status = post.Status;
+            //ctx.Posts.Update(updatepost);
             int rowsupdated = ctx.SaveChanges();
             return rowsupdated>0;
         }

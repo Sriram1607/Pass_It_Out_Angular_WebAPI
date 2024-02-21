@@ -30,8 +30,8 @@ namespace Pass_It_Out_Angular_WebAPI.Services.UserService
 
         public User IsUserExist(User user)
         {
-            return ctx.Users.Where(val=>val.UserId==user.UserId && val.Password==user.Password).FirstOrDefault();
-            
+            User existinguser = ctx.Users.Where(val => val.UserId == user.UserId && val.Password == user.Password).FirstOrDefault();
+            return existinguser;
         }
     }
 }
